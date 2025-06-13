@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Henna by Fuzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blush: #fcdede;
+            --ivory: #fffaf0;
+            --sage: #ffc6f6;
+            --peach: #ffe5b4;
+            --rose: #f5c2c2;
+            --gold: #d4af37;
+            --light: #fefefe;
+            --dark-gold: #b38f2a;
+            --henna: #6b4226;
+            --deep-gold: #8b7d47;
+            --champagne: #f7e7ce;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--champagne) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .thank-you-container {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(245, 194, 194, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .thank-you-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--henna);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--henna) 0%, var(--dark-gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .thank-you-message {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--henna);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .thank-you-details {
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .thank-you-details h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--henna);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .thank-you-details p {
+            color: var(--henna);
+            margin-bottom: 0.5rem;
+        }
+
+        .back-home-btn {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-shimmer {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .back-home-btn:hover .btn-shimmer {
+            left: 100%;
+        }
+
+        .signature {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .signature-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--henna);
+            margin-bottom: 0.5rem;
+        }
+
+        .signature-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark-gold);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .thank-you-title {
+                font-size: 2rem;
+            }
+
+            .thank-you-message {
+                font-size: 1.1rem;
+            }
+
+            .back-home-btn {
+                padding: 0.9rem 2rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-icon">🌸</div>
+        
+        <h1 class="thank-you-title">Thank You!</h1>
+        
+        <p class="thank-you-message">
+            Your message has been received and I'm absolutely thrilled to hear from you! 
+            I'll get back to you within 24 hours to discuss your beautiful henna vision.
+        </p>
+
+        <div class="thank-you-details">
+            <h3>What happens next?</h3>
+            <p>📧 I'll review your inquiry and respond via email</p>
+            <p>💬 For urgent requests, feel free to WhatsApp me directly</p>
+            <p>🎨 We'll discuss your design preferences and event details</p>
+            <p>📅 I'll check availability and provide a personalized quote</p>
+        </div>
+
+        <a href="index.html" class="back-home-btn">
+            <span>Back to Home</span>
+            <span>🏠</span>
+            <div class="btn-shimmer"></div>
+        </a>
+
+        <div class="signature">
+            <p class="signature-text">Looking forward to creating something beautiful together!</p>
+            <p class="signature-name">With love & artistry, Fuzz ✨</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto redirect to home after 30 seconds
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Slider Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #fffaf0;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #8B4513;
+            margin-bottom: 2rem;
+        }
+        
+        .test-instructions {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border: 2px solid #D4AF37;
+        }
+        
+        .test-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .test-list li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 5px;
+        }
+        
+        /* Include the comparison slider styles */
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --henna: #8B4513;
+        }
+        
+        .stain-comparison {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .comparison-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15);
+            cursor: ew-resize;
+            user-select: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .comparison-container:hover {
+            box-shadow: 0 20px 50px rgba(139, 69, 19, 0.2);
+        }
+
+        .comparison-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .after-image {
+            clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+            transition: clip-path 0.1s ease-out;
+            z-index: 2;
+        }
+
+        .before-image {
+            z-index: 1;
+        }
+
+        .comparison-slider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                rgba(212, 175, 55, 0.8), 
+                var(--gold), 
+                rgba(212, 175, 55, 0.8)
+            );
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            z-index: 3;
+            transition: all 0.2s ease;
+            border-radius: 2px;
+        }
+
+        .comparison-slider:hover {
+            width: 6px;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            border: 3px solid white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 
+                0 4px 15px rgba(212, 175, 55, 0.4),
+                0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: ew-resize;
+            transition: all 0.2s ease;
+            z-index: 4;
+        }
+
+        .slider-handle:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        .comparison-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        .label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            color: var(--henna);
+            font-weight: 500;
+            text-align: center;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🌸 Henna Comparison Slider Test</h1>
+        
+        <div class="test-instructions">
+            <h3>Test Instructions:</h3>
+            <ul class="test-list">
+                <li><strong>Desktop:</strong> Click and drag the slider handle left and right</li>
+                <li><strong>Mobile:</strong> Touch and swipe the slider handle</li>
+                <li><strong>Keyboard:</strong> Focus the slider and use arrow keys</li>
+                <li><strong>Click anywhere:</strong> Click anywhere on the image to move slider</li>
+                <li><strong>Visual feedback:</strong> Handle should scale and glow when dragging</li>
+                <li><strong>Smooth movement:</strong> The reveal should be smooth and responsive</li>
+            </ul>
+        </div>
+
+        <div class="stain-comparison">
+            <div class="comparison-container">
+                <img src="images/before.jpg" alt="Fresh Henna Application" class="comparison-image before-image">
+                <img src="images/after.jpg" alt="Deep Henna Stain After 24 Hours" class="comparison-image after-image">
+                <div class="comparison-slider">
+                    <div class="slider-handle">
+                        <span class="handle-icon">⟷</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-labels">
+                <span class="label before-label">Fresh Application</span>
+                <span class="label after-label">24 Hours Later</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simplified version of the comparison slider for testing
+        function initializeComparisonSlider() {
+            const slider = document.querySelector('.comparison-slider');
+            const afterImage = document.querySelector('.after-image');
+            const container = document.querySelector('.comparison-container');
+            const sliderHandle = document.querySelector('.slider-handle');
+
+            if (!slider || !afterImage || !container || !sliderHandle) return;
+
+            let isDragging = false;
+
+            function updateSlider(x) {
+                const rect = container.getBoundingClientRect();
+                const percentage = Math.max(0, Math.min(100, ((x - rect.left) / rect.width) * 100));
+
+                slider.style.left = percentage + '%';
+                afterImage.style.clipPath = `polygon(${percentage}% 0%, 100% 0%, 100% 100%, ${percentage}% 100%)`;
+                
+                if (isDragging) {
+                    sliderHandle.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                } else {
+                    sliderHandle.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+            }
+
+            function handleMouseDown(e) {
+                isDragging = true;
+                e.preventDefault();
+                updateSlider(e.clientX);
+            }
+
+            function handleMouseMove(e) {
+                if (!isDragging) return;
+                updateSlider(e.clientX);
+                e.preventDefault();
+            }
+
+            function handleMouseUp() {
+                isDragging = false;
+                updateSlider(event.clientX);
+            }
+
+            function handleTouchStart(e) {
+                isDragging = true;
+                e.preventDefault();
+                updateSlider(e.touches[0].clientX);
+            }
+
+            function handleTouchMove(e) {
+                if (!isDragging) return;
+                updateSlider(e.touches[0].clientX);
+                e.preventDefault();
+            }
+
+            function handleTouchEnd() {
+                isDragging = false;
+            }
+
+            // Mouse events
+            slider.addEventListener('mousedown', handleMouseDown);
+            sliderHandle.addEventListener('mousedown', handleMouseDown);
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+
+            // Touch events
+            slider.addEventListener('touchstart', handleTouchStart, { passive: false });
+            sliderHandle.addEventListener('touchstart', handleTouchStart, { passive: false });
+            document.addEventListener('touchmove', handleTouchMove, { passive: false });
+            document.addEventListener('touchend', handleTouchEnd);
+
+            // Click anywhere to position
+            container.addEventListener('click', (e) => {
+                if (!isDragging) {
+                    updateSlider(e.clientX);
+                }
+            });
+
+            // Keyboard support
+            slider.addEventListener('keydown', (e) => {
+                const rect = container.getBoundingClientRect();
+                const currentPercentage = ((slider.offsetLeft + slider.offsetWidth / 2) / container.offsetWidth) * 100;
+                let newPercentage = currentPercentage;
+
+                switch(e.key) {
+                    case 'ArrowLeft':
+                        newPercentage = Math.max(0, currentPercentage - 5);
+                        break;
+                    case 'ArrowRight':
+                        newPercentage = Math.min(100, currentPercentage + 5);
+                        break;
+                    default:
+                        return;
+                }
+
+                const newX = rect.left + (newPercentage / 100) * rect.width;
+                updateSlider(newX);
+                e.preventDefault();
+            });
+
+            slider.setAttribute('tabindex', '0');
+            
+            // Initialize at 50%
+            const rect = container.getBoundingClientRect();
+            const initialX = rect.left + rect.width * 0.5;
+            updateSlider(initialX);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initializeComparisonSlider);
+    </script>
+</body>
+</html>

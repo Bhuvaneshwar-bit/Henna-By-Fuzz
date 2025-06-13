@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="theme-color" content="#F5C2C2" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Henna by Fuzz | Professional Bridal Mehndi Artist | Traditional & Modern Henna Designs</title>
+  <meta name="description" content="Professional henna artist specializing in bridal mehndi, traditional Indian, Arabic, and modern minimal designs. Book your luxury henna experience with Henna by Fuzz - creating beautiful, intricate patterns for weddings, festivals, and special occasions.">
+  <meta name="keywords" content="henna artist, mehndi artist, bridal henna, wedding mehndi, traditional henna, arabic henna, modern henna, henna designs, professional mehndi, luxury henna, bridal mehndi artist">
+  <meta name="author" content="Henna by Fuzz">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hennabyfuzz.com/">
+  <meta property="og:title" content="Henna by Fuzz | Professional Bridal Mehndi Artist">
+  <meta property="og:description" content="Professional henna artist creating beautiful, intricate patterns for weddings, festivals, and special occasions. Specializing in traditional Indian, Arabic, and modern henna designs.">
+  <meta property="og:image" content="https://hennabyfuzz.com/images/henna-og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Henna by Fuzz">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hennabyfuzz.com/">
+  <meta property="twitter:title" content="Henna by Fuzz | Professional Bridal Mehndi Artist">
+  <meta property="twitter:description" content="Professional henna artist creating beautiful, intricate patterns for weddings, festivals, and special occasions.">
+  <meta property="twitter:image" content="https://hennabyfuzz.com/images/henna-twitter-image.jpg">
+
+  <!-- Additional SEO -->
+  <link rel="canonical" href="https://hennabyfuzz.com/">
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+  <meta name="language" content="English">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Critical CSS for immediate loading -->
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fffaf0;
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Immediate loading protection */
+    body.loading {
+      overflow: hidden !important;
+      position: fixed !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /* Hide all content except loader initially */
+    body.loading > *:not(.loader) {
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+
+    /* Ensure loader is visible */
+    .loader {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      background: #fffaf0 !important;
+      z-index: 99999 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    /* Critical navbar styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 250, 240, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Critical hero styles */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      background: #fffaf0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Immediate loading script -->
+  <script>
+    // INSTANT mobile button fix - runs immediately
+    (function() {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                      ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || window.innerWidth <= 768;
+
+      if (isMobile) {
+        console.log('🚀 INSTANT mobile fix applied');
+
+        // Add instant CSS
+        const style = document.createElement('style');
+        style.textContent = `
+          * {
+            touch-action: manipulation !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+          }
+          button, .btn, a, [onclick] {
+            cursor: pointer !important;
+            transition: none !important;
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Disable 300ms delay
+        document.addEventListener('touchstart', function(){}, {passive: true});
+      }
+    })();
+
+    // Ensure CSS loads properly and remove loading class when ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Force CSS to load
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'styles.css';
+      document.head.appendChild(link);
+
+      // Remove loading class after a short delay to ensure CSS is applied
+      setTimeout(() => {
+        document.body.classList.remove('loading');
+      }, 100);
+    });
+
+    // Fallback to remove loading class
+    window.addEventListener('load', function() {
+      document.body.classList.remove('loading');
+    });
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+<body class="loading">
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+
+  <!-- Particle Container -->
+  <div class="particle-container" id="particleContainer"></div>
+
+  <!-- Enhanced Henna Art Loading Experience -->
+  <div class="loader" id="loader">
+    <!-- Authentic Henna Background -->
+    <div class="loader-background">
+      <div class="henna-texture"></div>
+    </div>
+
+    <!-- Henna Art Canvas -->
+    <div class="henna-canvas">
+      <!-- Drawing Hand Animation -->
+      <div class="drawing-hand">
+        <div class="hand-silhouette"></div>
+        <div class="henna-cone"></div>
+        <div class="henna-flow"></div>
+      </div>
+
+      <!-- Intricate Henna Pattern Drawing -->
+      <svg class="henna-pattern-svg" viewBox="0 0 400 400">
+        <!-- Central Mandala -->
+        <g class="mandala-group">
+          <circle class="pattern-circle" cx="200" cy="200" r="80" />
+          <circle class="pattern-circle" cx="200" cy="200" r="60" />
+          <circle class="pattern-circle" cx="200" cy="200" r="40" />
+
+          <!-- Petals -->
+          <g class="petals-group">
+            <path class="petal" d="M200,120 Q220,140 200,160 Q180,140 200,120" />
+            <path class="petal" d="M240,160 Q260,180 240,200 Q220,180 240,160" />
+            <path class="petal" d="M240,240 Q260,220 240,200 Q220,220 240,240" />
+            <path class="petal" d="M200,280 Q220,260 200,240 Q180,260 200,280" />
+            <path class="petal" d="M160,240 Q140,220 160,200 Q180,220 160,240" />
+            <path class="petal" d="M160,160 Q140,180 160,200 Q180,180 160,160" />
+          </g>
+
+          <!-- Intricate Details -->
+          <g class="details-group">
+            <circle class="detail-dot" cx="200" cy="200" r="3" />
+            <circle class="detail-dot" cx="200" cy="180" r="2" />
+            <circle class="detail-dot" cx="200" cy="220" r="2" />
+            <circle class="detail-dot" cx="180" cy="200" r="2" />
+            <circle class="detail-dot" cx="220" cy="200" r="2" />
+          </g>
+
+          <!-- Flowing Vines -->
+          <g class="vines-group">
+            <path class="vine" d="M200,120 Q150,100 120,140 Q100,180 140,200" />
+            <path class="vine" d="M280,200 Q300,160 260,140 Q220,120 200,160" />
+            <path class="vine" d="M200,280 Q250,300 280,260 Q300,220 260,200" />
+            <path class="vine" d="M120,200 Q100,240 140,260 Q180,280 200,240" />
+          </g>
+        </g>
+      </svg>
+
+      <!-- Henna Drops Animation -->
+      <div class="henna-drops">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+      </div>
+    </div>
+
+    <!-- Brand Content with Henna Theme -->
+    <div class="loader-content">
+      <!-- Artistic Brand Logo -->
+      <div class="loader-brand">
+        <h1 class="brand-title">
+          <span class="brand-word henna-style">Henna</span>
+          <span class="brand-word connector">by</span>
+          <span class="brand-word artist-name">Fuzz</span>
+        </h1>
+        <div class="brand-underline"></div>
+      </div>
+
+      <!-- Poetic Tagline with Henna Essence -->
+      <div class="tagline-container">
+        <div class="tagline-text">
+          <span class="tagline-word">Where</span>
+          <span class="tagline-word highlight">tradition</span>
+          <span class="tagline-word">meets</span>
+          <span class="tagline-word highlight">contemporary</span>
+          <span class="tagline-word highlight">elegance</span>
+        </div>
+        <div class="tagline-ornament"></div>
+      </div>
+
+      <!-- Artistic Progress Indicator -->
+      <div class="henna-progress">
+        <div class="progress-label">Creating your experience...</div>
+        <div class="progress-art">
+          <div class="progress-pattern" id="progress-pattern"></div>
+          <div class="progress-glow"></div>
+        </div>
+        <div class="progress-percentage" id="progress-percentage">0%</div>
+      </div>
+    </div>
+
+    <!-- Ambient Henna Elements -->
+    <div class="henna-ambience">
+      <div class="floating-pattern pattern-1"></div>
+      <div class="floating-pattern pattern-2"></div>
+      <div class="floating-pattern pattern-3"></div>
+      <div class="floating-pattern pattern-4"></div>
+
+      <!-- Aromatic Essence Animation -->
+      <div class="essence-particles">
+        <div class="essence-particle"></div>
+        <div class="essence-particle"></div>
+        <div class="essence-particle"></div>
+        <div class="essence-particle"></div>
+        <div class="essence-particle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enhanced Navbar -->
+  <nav class="navbar">
+  <div class="logo" onclick="window.location.reload(); window.scrollTo(0,0);" style="cursor: pointer;">
+    <span class="logo-text">Henna by Fuzz</span>
+    <div class="logo-highlight"></div>
+    <div class="golden-border"></div>
+  </div>
+
+  <!-- Mobile Menu Toggle -->
+  <div class="mobile-menu-toggle" id="mobileMenuToggle">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home"><span class="nav-link-text">Home</span><span class="gold-underline"></span></a>
+    <a href="#about"><span class="nav-link-text">About</span><span class="gold-underline"></span></a>
+    <a href="#services"><span class="nav-link-text">Services</span><span class="gold-underline"></span></a>
+    <a href="#portfolio"><span class="nav-link-text">Portfolio</span><span class="gold-underline"></span></a>
+    <a href="#feedback"><span class="nav-link-text">Reviews</span><span class="gold-underline"></span></a>
+    <a href="#contact"><span class="nav-link-text">Contact</span><span class="gold-underline"></span></a>
+  </div>
+</nav>
+
+
+  <!-- Elegant Floating Side Popup -->
+  <div class="elegant-side-popup" id="elegantSidePopup">
+    <div class="popup-content">
+      <button class="popup-close" onclick="closeElegantPopup()">
+        <span class="close-icon">✕</span>
+      </button>
+
+      <div class="popup-header">
+        <div class="popup-icon">
+          <span class="henna-emoji">🌸</span>
+        </div>
+        <h3 class="popup-title">Let's Create Together</h3>
+      </div>
+
+      <div class="popup-body">
+        <p class="popup-message">
+          Ready to bring your henna dreams to life?
+          Let's chat about your perfect design!
+        </p>
+
+        <div class="popup-actions">
+          <a href="https://ig.me/m/henna.by.fuzz" target="_blank" class="elegant-dm-btn" id="elegantDmBtn">
+            <span class="btn-icon">💌</span>
+            <span class="btn-text">Message Me</span>
+            <div class="btn-glow"></div>
+          </a>
+        </div>
+
+        <div class="popup-footer">
+          <p class="footer-signature">
+            <span class="signature-text">With love, Fuzz</span>
+            <span class="signature-heart">✨</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enhanced Hero Section -->
+  <section class="hero" id="home">
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="floating-henna" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+      <div class="floating-henna" style="top: 70%; left: 85%; animation-delay: 3s;"></div>
+      <div class="floating-henna" style="top: 30%; left: 80%; animation-delay: 6s;"></div>
+            <div class="floating-henna" style="top: 60%; left: 10%; animation-delay: 9s;"></div>
+    </div>
+
+    <div class="hero-text">
+      <h1>
+        <span class="word">Henna</span>
+        <span class="word">By</span>
+        <span class="word pop-text">Fuzz</span>
+      </h1>
+      <p class="hero-subtitle">
+        Where tradition meets contemporary elegance. Our <span class="highlight-text">bespoke henna designs</span>
+        transform your skin into a canvas of intricate beauty for weddings, celebrations, and special moments.
+      </p>
+      <div class="btn-container">
+        <button class="btn btn-primary" onclick="openBookingModal()">Book a Session</button>
+      </div>
+    </div>
+
+    <div class="hero-img-container">
+      <div class="img-decorations">
+        <div class="decoration-ring"></div>
+        <div class="decoration-ring"></div>
+      </div>
+      <img src="images/akmeh1.jpg" alt="Henna Art by Fuzz" class="hero-img">
+    </div>
+
+
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about-section" id="about">
+    <!-- Floating Elements - Same as Hero Section -->
+    <div class="floating-elements">
+      <div class="floating-henna" style="top: 15%; left: 10%; animation-delay: 1s;"></div>
+      <div class="floating-henna" style="top: 75%; left: 90%; animation-delay: 4s;"></div>
+      <div class="floating-henna" style="top: 25%; left: 85%; animation-delay: 7s;"></div>
+      <div class="floating-henna" style="top: 65%; left: 5%; animation-delay: 10s;"></div>
+    </div>
+
+    <!-- Floating Decorative Elements -->
+    <div class="about-decoration henna-leaf-1"></div>
+    <div class="about-decoration henna-leaf-2"></div>
+    <div class="about-decoration henna-dot-1"></div>
+
+    <!-- Particle Container for Background Effects -->
+    <div class="about-particles" id="aboutParticleContainer"></div>
+
+    <div class="about-container">
+      <div class="about-content">
+        <h2 class="about-title" data-aos="fade-up" data-aos-duration="800">About Me</h2>
+        <div class="about-text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <h3 class="shimmer-text">Farzia Tabassum</h3>
+          <p class="gradient-text">Professional Bridal Henna Artist | Chennai</p>
+          <p>With over 7 years of professional expertise, I am proud to be recognized as one of Chennai's premier bridal henna artists. My work is a heartfelt fusion of tradition, artistry, and elegance—crafted to reflect the individuality of each bride I have the honor of adorning.</p>
+          <p>I specialize in custom, intricate bridal mehndi using 100% organic, homemade henna, carefully prepared with natural ingredients to ensure deep, long-lasting stains and a safe, skin-friendly application. Every paste is crafted fresh, ensuring not only rich color but also a soothing and aromatic experience.</p>
+          <p>Whether it's a grand wedding celebration, an intimate engagement, or a festive occasion like Eid, Karva Chauth, or Baby Showers, my designs are personalized to match your style and significance of the moment. From traditional Rajasthani and Mughal patterns to modern minimalistic themes, I blend classical motifs with contemporary elements to suit your preferences.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+            <span class="stat-number" data-target="500">0</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+            <span class="stat-number" data-target="7">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="800">
+            <span class="stat-number" data-target="1000">0</span>
+            <span class="stat-label">Designs Created</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-images" data-aos="fade-left" data-aos-duration="1000">
+        <div class="image-container">
+          <img src="images/akmeh7.jpg" alt="Artist applying henna design" class="swapping-image active">
+          <img src="images/akmeh2.PNG" alt="Beautiful Henna Design" class="swapping-image">
+          <img src="images/akmeh4.PNG" alt="Intricate Henna Patterns" class="swapping-image">
+          <img src="images/akmeh3.PNG" alt="Bridal Henna Art" class="swapping-image">
+          <img src="images/akmeh5.jpg" alt="Traditional Mehndi" class="swapping-image">
+          <img src="images/akmeh6.jpg" alt="Beautiful Floral Henna Design on Hand" class="swapping-image">
+          <img src="images/akmeh8.jpg" alt="Intricate Bridal Henna Design on Arm" class="swapping-image">
+        </div>
+
+        <div class="image-dots">
+          <div class="dot active" data-index="0" aria-label="Show image 1 of 7"></div>
+          <div class="dot" data-index="1" aria-label="Show image 2 of 7"></div>
+          <div class="dot" data-index="2" aria-label="Show image 3 of 7"></div>
+          <div class="dot" data-index="3" aria-label="Show image 4 of 7"></div>
+          <div class="dot" data-index="4" aria-label="Show image 5 of 7"></div>
+          <div class="dot" data-index="5" aria-label="Show image 6 of 7"></div>
+          <div class="dot" data-index="6" aria-label="Show image 7 of 7"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exquisite Services Section -->
+  <section class="services-section" id="services">
+    <!-- Floating Elements and Decorations remain unchanged -->
+    <div class="floating-elements">
+      <div class="floating-henna" style="top: 20%; left: 8%; animation-delay: 2s;"></div>
+      <div class="floating-henna" style="top: 80%; left: 92%; animation-delay: 5s;"></div>
+      <div class="floating-henna" style="top: 30%; left: 88%; animation-delay: 8s;"></div>
+      <div class="floating-henna" style="top: 70%; left: 3%; animation-delay: 11s;"></div>
+    </div>
+
+    <div class="services-decoration henna-vine-1"></div>
+    <div class="services-decoration henna-vine-2"></div>
+    <div class="services-decoration henna-mandala"></div>
+
+    <div class="services-particles" id="servicesParticleContainer"></div>
+
+    <div class="services-container">
+      <!-- Services Header -->
+      <div class="services-header">
+        <h2 class="services-title" data-aos="fade-up" data-aos-duration="800">
+          <span class="title-word">Artistry</span>
+          <span class="title-word highlight">and</span>
+          <span class="title-word">Services</span>
+        </h2>
+        <p class="services-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          Elevating traditional artistry with contemporary sophistication. Each design is meticulously crafted to honor your heritage while embracing modern elegance.
+        </p>
+        <div class="services-ornament"></div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="services-grid">
+        <!-- Bridal Henna -->
+        <div class="service-card premium" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <div class="service-icon">
+            <div class="icon-henna"></div>
+          </div>
+          <h3 class="service-title">Bridal Artistry</h3>
+          <p class="service-description">
+            Exquisite full-hand and feet designs meticulously crafted for your wedding journey. Our signature bridal collections blend timeless traditions with contemporary refinement.
+          </p>
+          <div class="service-features">
+            <span class="feature">Signature Designs</span>
+            <span class="feature">Heritage Motifs</span>
+            <span class="feature">Luxury Experience</span>
+          </div>
+          <div class="service-glow"></div>
+        </div>
+
+        <!-- Sangeet & Mehndi Functions -->
+        <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <div class="service-icon">
+            <div class="icon-henna"></div>
+          </div>
+          <h3 class="service-title">Ceremonial Collections</h3>
+          <p class="service-description">
+            Distinguished designs for Sangeet and Mehndi ceremonies. Creating harmonious artistry that enhances your pre-wedding celebrations with grace and sophistication.
+          </p>
+          <div class="service-features">
+            <span class="feature">Event Styling</span>
+            <span class="feature">Coordinated Designs</span>
+            <span class="feature">Family Ensembles</span>
+          </div>
+          <div class="service-glow"></div>
+        </div>
+
+        <!-- Engagement & Reception -->
+        <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+          <div class="service-icon">
+            <div class="icon-henna"></div>
+          </div>
+          <h3 class="service-title">Contemporary Occasions</h3>
+          <p class="service-description">
+            Refined designs for engagements and receptions. Minimalist patterns that embody modern sophistication while maintaining cultural authenticity.
+          </p>
+          <div class="service-features">
+            <span class="feature">Modern Aesthetic</span>
+            <span class="feature">Refined Details</span>
+            <span class="feature">Elegant Simplicity</span>
+          </div>
+          <div class="service-glow"></div>
+        </div>
+
+        <!-- Cultural Celebrations -->
+        <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+          <div class="service-icon">
+            <div class="icon-henna"></div>
+          </div>
+          <h3 class="service-title">Cultural Celebrations</h3>
+          <p class="service-description">
+            Bespoke designs for significant cultural moments including Karva Chauth, Eid, and traditional ceremonies. Artistry that honors heritage with contemporary grace.
+          </p>
+          <div class="service-features">
+            <span class="feature">Traditional Art</span>
+            <span class="feature">Cultural Motifs</span>
+            <span class="feature">Timeless Designs</span>
+          </div>
+          <div class="service-glow"></div>
+        </div>
+
+        <!-- Private Consultations -->
+        <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+          <div class="service-icon">
+            <div class="icon-henna"></div>
+          </div>
+          <h3 class="service-title">Private Consultations</h3>
+          <p class="service-description">
+            Exclusive one-on-one sessions tailored to your artistic vision. A personalized experience designed around your preferences and schedule.
+          </p>
+          <div class="service-features">
+            <span class="feature">Bespoke Design</span>
+            <span class="feature">Private Setting</span>
+            <span class="feature">Personal Attention</span>
+          </div>
+          <div class="service-glow"></div>
+        </div>
+
+        <!-- Professional Collaborations -->
+        <div class="service-card creative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+          <div class="service-icon">
+            <div class="icon-henna"></div>
+          </div>
+          <h3 class="service-title">Professional Collaborations</h3>
+          <p class="service-description">
+            Sophisticated designs for editorial shoots and brand partnerships. Elevating visual narratives through artistic excellence and attention to detail.
+          </p>
+          <div class="service-features">
+            <span class="feature">Editorial Design</span>
+            <span class="feature">Brand Aesthetics</span>
+            <span class="feature">Creative Direction</span>
+          </div>
+          <div class="service-glow"></div>
+        </div>
+      </div>
+
+      <!-- Henna Styles Section -->
+      <div class="styles-section">
+        <div class="styles-header">
+          <h3 class="styles-title" data-aos="fade-up" data-aos-duration="800">
+            <span class="title-word">Signature</span>
+            <span class="title-word highlight">Design</span>
+            <span class="title-word">Collections</span>
+          </h3>
+          <p class="styles-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            Discover our curated collections, each embodying distinct artistic traditions reimagined for the contemporary aesthetic.
+          </p>
+        </div>
+
+        <div class="styles-grid">
+          <!-- Traditional Indian -->
+          <div class="style-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+            <div class="style-pattern traditional-pattern"></div>
+            <div class="style-content">
+              <h4 class="style-name">Traditional Indian</h4>
+              <p class="style-description">
+                Rich, detailed motifs with paisleys, florals, and bridal storytelling.
+                Timeless patterns that honor ancient traditions and cultural heritage.
+              </p>
+              <div class="style-tags">
+                <span class="tag">Paisleys</span>
+                <span class="tag">Florals</span>
+                <span class="tag">Storytelling</span>
+              </div>
+              <button class="style-gallery-btn" onclick="openStyleGallery('traditional')">
+                <span class="btn-icon">📸</span>
+                <span class="btn-text">View Gallery</span>
+                <div class="btn-shimmer"></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Arabic -->
+          <div class="style-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+            <div class="style-pattern arabic-pattern"></div>
+            <div class="style-content">
+              <h4 class="style-name">Arabic</h4>
+              <p class="style-description">
+                Bold, flowing patterns with floral and leafy elements, perfect for quick yet stunning looks.
+                Elegant simplicity with maximum visual impact.
+              </p>
+              <div class="style-tags">
+                <span class="tag">Bold Patterns</span>
+                <span class="tag">Flowing Design</span>
+                <span class="tag">Quick Application</span>
+              </div>
+              <button class="style-gallery-btn" onclick="openStyleGallery('arabic')">
+                <span class="btn-icon">🌿</span>
+                <span class="btn-text">View Gallery</span>
+                <div class="btn-shimmer"></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Khafeef -->
+          <div class="style-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
+            <div class="style-pattern khafeef-pattern"></div>
+            <div class="style-content">
+              <h4 class="style-name">Khafeef</h4>
+              <p class="style-description">
+                Delicate flowers intertwined with leafy vines, creating a graceful pattern.
+                Light, airy designs that embody feminine elegance and natural beauty.
+              </p>
+              <div class="style-tags">
+                <span class="tag">Delicate Flowers</span>
+                <span class="tag">Leafy Vines</span>
+                <span class="tag">Graceful</span>
+              </div>
+              <button class="style-gallery-btn" onclick="openStyleGallery('khafeef')">
+                <span class="btn-icon">🌸</span>
+                <span class="btn-text">View Gallery</span>
+                <div class="btn-shimmer"></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Modern Minimal -->
+          <div class="style-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
+            <div class="style-pattern minimal-pattern"></div>
+            <div class="style-content">
+              <h4 class="style-name">Modern Minimal</h4>
+              <p class="style-description">
+                Clean, elegant designs for brides who love simplicity and style.
+                Contemporary aesthetics with sophisticated, understated beauty.
+              </p>
+              <div class="style-tags">
+                <span class="tag">Clean Lines</span>
+                <span class="tag">Elegant</span>
+                <span class="tag">Contemporary</span>
+              </div>
+              <button class="style-gallery-btn" onclick="openStyleGallery('minimal')">
+                <span class="btn-icon">✨</span>
+                <span class="btn-text">View Gallery</span>
+                <div class="btn-shimmer"></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Fusion -->
+          <div class="style-card fusion-special" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+            <div class="style-pattern fusion-pattern"></div>
+            <div class="style-content">
+              <h4 class="style-name">Floral</h4>
+              <p class="style-description">
+                A blend of Indian, Arabic, and contemporary styles customized for your event.
+                Unique combinations that create something entirely new and personal.
+              </p>
+              <div class="style-tags">
+                <span class="tag">Custom Blend</span>
+                <span class="tag">Unique Design</span>
+                <span class="tag">Personal Touch</span>
+              </div>
+              <button class="style-gallery-btn fusion-btn" onclick="openStyleGallery('fusion')">
+                <span class="btn-icon">🎨</span>
+                <span class="btn-text">View Gallery</span>
+                <div class="btn-shimmer"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artistic Boundaries Notice -->
+      <div class="artistic-notice" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+        <div class="notice-icon">
+          <div class="respect-symbol">🙏</div>
+        </div>
+        <div class="notice-content">
+          <h4 class="notice-title">Artistic Boundaries & Respect</h4>
+          <p class="notice-text">
+            In honor of personal beliefs and cultural sensitivity, I do not offer facial portraits
+            (such as dulha-dulhan faces or deity features) in my henna designs.
+            My artistry focuses on beautiful patterns, motifs, and symbolic elements that celebrate
+            tradition while respecting diverse beliefs.
+          </p>
+        </div>
+        <div class="notice-ornament"></div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Exquisite Portfolio Section -->
+  <section class="portfolio-section" id="portfolio">
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="floating-henna" style="top: 15%; left: 5%; animation-delay: 3s;"></div>
+      <div class="floating-henna" style="top: 85%; left: 95%; animation-delay: 6s;"></div>
+      <div class="floating-henna" style="top: 40%; left: 90%; animation-delay: 9s;"></div>
+    </div>
+
+    <!-- Zen Background Elements -->
+    <div class="zen-mandala zen-mandala-1"></div>
+    <div class="zen-mandala zen-mandala-2"></div>
+    <div class="henna-vines henna-vine-left"></div>
+    <div class="henna-vines henna-vine-right"></div>
+
+    <div class="portfolio-container">
+      <!-- Portfolio Header -->
+      <div class="portfolio-header" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="portfolio-title">
+          <span class="title-word">Our</span>
+          <span class="title-word highlight">Portfolio</span>
+        </h2>
+        <p class="portfolio-subtitle">
+          Each design tells a story, each pattern holds a memory.
+          Discover the artistry that transforms moments into timeless beauty.
+        </p>
+        <div class="zen-quote">
+          <p>"Each curve, a blessing. Each dot, a promise."</p>
+        </div>
+      </div>
+
+      <!-- Portfolio Filter Tabs -->
+      <div class="portfolio-filters" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <button class="filter-btn active" data-filter="all">All Designs</button>
+        <button class="filter-btn" data-filter="organic" onclick="openOrganicConeModal()">Organic Cone</button>
+      </div>
+
+      <!-- Featured Bride of the Month -->
+      <div class="featured-bride" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <!-- Bride Badge at top -->
+        <div class="bride-badge">
+          <span class="crown-icon">👑</span>
+          <span class="badge-text">Bride of the Month</span>
+        </div>
+
+        <!-- Large Image for mobile (positioned above content) -->
+        <div class="bride-image-large">
+          <img src="images/akmeh1.jpg" alt="Featured Bride - Beautiful Bridal Henna Design" loading="lazy">
+          <div class="bride-overlay">
+            <div class="bride-details">
+              <h3 class="bride-name">Priya's Wedding</h3>
+              <p class="bride-date">October 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop layout: side by side content -->
+        <div class="bride-content">
+          <!-- Regular image for desktop (left side) -->
+          <div class="bride-image">
+            <img src="images/akmeh1.jpg" alt="Featured Bride - Beautiful Bridal Henna Design" loading="lazy">
+            <div class="bride-overlay">
+              <div class="bride-details">
+                <h3 class="bride-name">Priya's Wedding</h3>
+                <p class="bride-date">October 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Love Story content (right side on desktop, below image on mobile) -->
+          <div class="bride-story">
+            <h3 class="story-title">A Love Story in Henna</h3>
+            <p class="story-text">
+              "Priya wanted her henna to tell the story of her journey with her beloved.
+              We incorporated their initials, the date they first met, and symbols representing
+              their shared dreams. Every swirl captured a memory, every pattern a promise."
+            </p>
+            <div class="story-quote">
+              <p>"It wasn't just henna, it was our love story written in art." - Priya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before & After Stain Reveal -->
+      <div class="stain-reveal-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <h3 class="reveal-title">The Magic of Time</h3>
+        <p class="reveal-subtitle">Watch how henna transforms from fresh application to rich, deep stain</p>
+        <div class="stain-comparison">
+          <div class="comparison-grid">
+            <div class="comparison-item">
+              <div class="comparison-image-wrapper">
+                <img src="images/before.jpg" alt="Fresh Henna Application" class="comparison-image">
+              </div>
+              <div class="comparison-label">
+                <span class="label before-label">Fresh Application</span>
+              </div>
+            </div>
+            <div class="comparison-item">
+              <div class="comparison-image-wrapper">
+                <img src="images/after.jpg" alt="Deep Henna Stain After 24 Hours" class="comparison-image">
+              </div>
+              <div class="comparison-label">
+                <span class="label after-label">24 Hours Later</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Masonry Grid -->
+      <div class="portfolio-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+        <!-- Zen Full-Width Shot 1 -->
+        <div class="portfolio-item zen-shot" data-category="all">
+          <div class="zen-image">
+            <img src="images/akmeh6.jpg" alt="Zen Henna Artistry - Peaceful Patterns" loading="lazy">
+            <div class="zen-overlay">
+              <div class="zen-caption">
+                <p>"In stillness, patterns emerge. In silence, beauty speaks."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Items -->
+        <div class="portfolio-item" data-category="bridal">
+          <div class="portfolio-image">
+            <img src="images/akmeh8.jpg" alt="Bridal Henna Design - Intricate Wedding Patterns" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="overlay-content">
+                <h4 class="design-title">Bridal Elegance</h4>
+                <p class="design-type">Traditional Bridal</p>
+                <p class="design-date">September 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="minimal">
+          <div class="portfolio-image">
+            <img src="images/akmeh9.jpg" alt="Minimal Henna Design - Clean Modern Patterns" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="overlay-content">
+                <h4 class="design-title">Modern Minimalism</h4>
+                <p class="design-type">Contemporary Style</p>
+                <p class="design-date">August 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="custom">
+          <div class="portfolio-image">
+            <img src="images/akmeh12.jpeg" alt="Custom Henna Design - Personalized Patterns" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="overlay-content">
+                <h4 class="design-title">Personal Story</h4>
+                <p class="design-type">Custom Design</p>
+                <p class="design-date">July 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zen Full-Width Shot 2 -->
+        <div class="portfolio-item zen-shot" data-category="all">
+          <div class="zen-image">
+            <img src="images/work1.jpg" alt="Zen Henna Artistry - Sacred Geometry" loading="lazy">
+            <div class="zen-overlay">
+              <div class="zen-caption">
+                <p>"Sacred geometry meets ancient art. Timeless beauty, eternal grace."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="organic">
+          <div class="portfolio-image">
+            <img src="images/akmeh510.jpg" alt="Custom Henna Design - Unique Artistry" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="overlay-content">
+                <h4 class="design-title">Unique Vision</h4>
+                <p class="design-type">Custom Creation</p>
+                <p class="design-date">March 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram Reels Section -->
+      <div class="reels-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+        <h3 class="reels-title">Behind the Art</h3>
+        <p class="reels-subtitle">Watch the magic unfold in our Instagram Reels</p>
+        <div class="reels-grid">
+          <div class="reel-item">
+            <div class="reel-content">
+              <div class="reel-icon">📱</div>
+              <p class="reel-text">Bridal Henna Process</p>
+              <a href="https://www.instagram.com/reel/DKAFevmyamO/?igsh=MTdwYnVienZwbmFpbA==" target="_blank" rel="noopener noreferrer" class="reel-button">
+                <span class="button-text">A Journey in Mehndi – Tap to Reveal</span>
+                <span class="button-icon">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="reel-item">
+            <div class="reel-content">
+              <div class="reel-icon">🎥</div>
+              <p class="reel-text">Time-lapse Creation</p>
+              <a href="https://www.instagram.com/reel/DJO8WdUSaZp/?igsh=MWphdHhndXVibmVrdQ==" target="_blank" rel="noopener noreferrer" class="reel-button">
+                <span class="button-text">A Journey in Mehndi – Tap to Reveal</span>
+                <span class="button-icon">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="reel-item">
+            <div class="reel-content">
+              <div class="reel-icon">✨</div>
+              <p class="reel-text">Stain Reveal</p>
+              <a href="https://www.instagram.com/reel/DH6GOxNygQb/?igsh=MTI1dnhwMmhpNnVpcQ==" target="_blank" rel="noopener noreferrer" class="reel-button">
+                <span class="button-text">A Journey in Mehndi – Tap to Reveal</span>
+                <span class="button-icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Elegant Style Gallery Modal -->
+  <div class="gallery-modal" id="galleryModal">
+    <div class="gallery-overlay" onclick="closeStyleGallery()"></div>
+    <div class="gallery-container">
+      <div class="gallery-header">
+        <h3 class="gallery-title" id="galleryTitle">Traditional Indian Henna</h3>
+        <button class="gallery-close" onclick="closeStyleGallery()">
+          <span class="close-icon">✕</span>
+        </button>
+      </div>
+
+      <div class="gallery-content">
+        <div class="gallery-main">
+          <div class="main-media-container">
+            <img id="mainGalleryImage" src="" alt="Henna Design" class="main-gallery-image" style="display: none;">
+            <video id="mainGalleryVideo" class="main-gallery-video" style="display: none;" controls>
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="media-navigation">
+              <button class="nav-btn prev-btn" onclick="previousImage()">
+                <span class="nav-icon">‹</span>
+              </button>
+              <button class="nav-btn next-btn" onclick="nextImage()">
+                <span class="nav-icon">›</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="gallery-thumbnails">
+          <div class="thumbnails-container" id="thumbnailsContainer">
+            <!-- Thumbnails will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-info">
+        <p class="gallery-description" id="galleryDescription">
+          Explore our beautiful collection of henna designs in this style.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Reviews Section -->
+  <section class="reviews-section" id="feedback">
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="floating-henna" style="top: 20%; left: 10%; animation-delay: 2s;"></div>
+      <div class="floating-henna" style="top: 80%; left: 90%; animation-delay: 5s;"></div>
+      <div class="floating-henna" style="top: 40%; left: 85%; animation-delay: 8s;"></div>
+    </div>
+
+    <!-- Background Decorations -->
+    <div class="feedback-decoration henna-mandala-1"></div>
+    <div class="feedback-decoration henna-mandala-2"></div>
+    <div class="feedback-particles" id="feedbackParticleContainer"></div>
+
+    <div class="reviews-container">
+      <!-- Reviews Header -->
+      <div class="reviews-header" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="reviews-title">
+          <span class="title-word">Client</span>
+          <span class="title-word highlight">Reviews</span>
+        </h2>
+        <p class="reviews-subtitle">
+          Share your experience and read what others have to say about their henna journey with us.
+        </p>
+        <div class="reviews-ornament"></div>
+      </div>
+
+      <!-- Review Submission Form -->
+      <div class="review-form-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div class="review-form-container">
+          <h3 class="form-title">Share Your Experience</h3>
+          <form class="review-form" id="reviewForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reviewerName" class="form-label">Your Name</label>
+                <input type="text" id="reviewerName" name="reviewerName" class="form-input" placeholder="Enter your name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Rating</label>
+              <div class="star-rating" id="starRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <input type="hidden" id="selectedRating" name="rating" value="0">
+              <p class="rating-text" id="ratingText">Click to rate</p>
+            </div>
+
+            <div class="form-group">
+              <label for="reviewComment" class="form-label">Your Review</label>
+              <textarea id="reviewComment" name="reviewComment" class="form-textarea" placeholder="Tell us about your experience with our henna services..." rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-review-btn">
+              <span class="btn-text">Submit Review</span>
+              <span class="btn-icon">⭐</span>
+              <div class="btn-shimmer"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Dynamic Reviews Display -->
+      <div class="reviews-display" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <h3 class="reviews-display-title">Recent Reviews</h3>
+        <div class="reviews-list" id="reviewsList">
+          <!-- Dynamic reviews will be inserted here -->
+          <div class="no-reviews-message" id="noReviewsMessage">
+            <div class="no-reviews-icon">⭐</div>
+            <p>Be the first to share your experience!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Personal Contact Section -->
+  <section class="contact-section" id="contact">
+    <!-- Floating Henna Vines -->
+    <div class="floating-vines">
+      <div class="vine vine-1"></div>
+      <div class="vine vine-2"></div>
+      <div class="vine vine-3"></div>
+    </div>
+
+    <!-- Mandala Watermark -->
+    <div class="mandala-watermark"></div>
+
+    <!-- Floating Particles -->
+    <div class="contact-particles" id="contactParticles"></div>
+
+    <div class="contact-container">
+      <!-- Contact Header -->
+      <div class="contact-header" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="contact-title">
+          <span class="title-word">Let's</span>
+          <span class="title-word highlight">Connect</span>
+        </h2>
+        <p class="contact-subtitle">
+          Ready to create something beautiful together? I'd love to hear about your vision
+          and bring your henna dreams to life.
+        </p>
+        <div class="contact-quote">
+          <p>"Let's create something beautiful together ✨"</p>
+        </div>
+      </div>
+
+      <div class="contact-content">
+        <!-- Contact Form -->
+        <div class="contact-form-section" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mrbkbvyq" method="POST">
+            <!-- Form Spree hidden fields -->
+            <input type="hidden" name="_subject" value="New Henna Inquiry from Website">
+            <input type="hidden" name="_next" value="thank-you.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_to" value="farzu1428@gmail.com">
+
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="What should I call you?" required>
+              <div class="input-decoration"></div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="whatsapp" class="form-label">WhatsApp Number</label>
+                <input type="tel" id="whatsapp" name="whatsapp" class="form-input" placeholder="+91 73388 26142" required>
+                <div class="input-decoration"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="_replyto" class="form-input" placeholder="your@email.com" required>
+                <div class="input-decoration"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="eventType" class="form-label">Event Type / Inquiry</label>
+              <select id="eventType" name="eventType" class="form-select" required>
+                <option value="">Choose your occasion...</option>
+                <option value="bridal">Bridal Henna</option>
+                <option value="sangeet">Sangeet & Mehndi Functions</option>
+                <option value="engagement">Engagement & Reception</option>
+                <option value="festival">Baby Showers & Festivals</option>
+                <option value="private">Private Appointment</option>
+                <option value="photoshoot">Influencer / Photoshoot</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="select-decoration"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Tell Me About Your Vision</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Share your ideas, inspiration, or any special requests..." rows="5" required></textarea>
+              <div class="input-decoration"></div>
+            </div>
+
+            <button type="submit" class="contact-submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">💌</span>
+              <div class="btn-shimmer"></div>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-section" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+          <div class="contact-card">
+            <div class="contact-methods">
+
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <span class="icon">📧</span>
+                </div>
+                <div class="method-content">
+                  <h4 class="method-title">Email</h4>
+                  <p class="method-description">Detailed inquiries & portfolios</p>
+                  <a href="mailto:hello@hennabyfuzz.com" class="method-link email-btn">
+                    <span class="link-text">hello@hennabyfuzz.com</span>
+                    <span class="link-icon">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <span class="icon">📸</span>
+                </div>
+                <div class="method-content">
+                  <h4 class="method-title">Instagram</h4>
+                  <p class="method-description">Latest work & inspiration</p>
+                  <a href="https://instagram.com/hennabyfuzz" class="method-link instagram-btn" target="_blank">
+                    <span class="link-text">@hennabyfuzz</span>
+                    <span class="link-icon">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- QR Code Section -->
+            <div class="qr-section">
+              <div class="qr-card">
+                <div class="qr-code-display">
+                  <img src="images/qr.jpg" alt="QR Code - Quick Connect" class="qr-image">
+                </div>
+                <div class="qr-info">
+                  <h4 class="qr-title">Quick Connect</h4>
+                  <p class="qr-description">Scan to visit our Instagram or book directly</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Warm Sign-off -->
+            <div class="contact-signoff">
+              <div class="signoff-content">
+                <p class="signoff-text">
+                  "Every inquiry is the beginning of a beautiful journey.
+                  I can't wait to hear your story and create something magical together."
+                </p>
+                <div class="signoff-signature">
+                  <span class="signature-text">With love & artistry,</span>
+                  <span class="signature-name">Farzia Tabassum ✨</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div class="booking-modal" id="bookingModal">
+    <div class="booking-overlay" onclick="closeBookingModal()"></div>
+    <div class="booking-container">
+      <div class="booking-header">
+        <div class="booking-icon">
+          <span class="henna-emoji">🌸</span>
+        </div>
+        <h3 class="booking-title">Book Your Henna Session</h3>
+        <button class="booking-close" onclick="closeBookingModal()">
+          <span class="close-icon">✕</span>
+        </button>
+      </div>
+
+      <div class="booking-content">
+        <div class="availability-info">
+          <div class="availability-header">
+            <span class="clock-icon">🕘</span>
+            <h4>Availability Hours</h4>
+          </div>
+          <div class="time-slots">
+            <div class="time-slot">
+              <span class="day">Monday - Sunday</span>
+              <span class="hours">9:00 AM - 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-header">
+            <span class="phone-icon">📞</span>
+            <h4>Call to Book</h4>
+          </div>
+          <div class="phone-number">
+            <a href="tel:+917338826142" class="phone-link">
+              <span class="country-code">+91</span>
+              <span class="number">7338826142</span>
+            </a>
+          </div>
+          <p class="booking-note">
+            Call during availability hours for instant booking confirmation
+          </p>
+        </div>
+
+        <div class="booking-actions">
+          <a href="tel:+917338826142" class="call-now-btn">
+            <span class="btn-icon">📱</span>
+            <span class="btn-text">Call Now</span>
+            <div class="btn-shimmer"></div>
+          </a>
+          <a href="https://wa.me/917338826142?text=Hi! I would like to book a henna session. Are you available?" target="_blank" class="whatsapp-btn">
+            <span class="btn-icon">💬</span>
+            <span class="btn-text">WhatsApp</span>
+            <div class="btn-shimmer"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Organic Cone Modal -->
+  <div class="organic-cone-modal" id="organicConeModal">
+    <div class="organic-overlay" onclick="closeOrganicConeModal()"></div>
+    <div class="organic-container">
+      <div class="organic-header">
+        <div class="organic-icon">
+          <span class="henna-emoji">🌿</span>
+        </div>
+        <h3 class="organic-title">Organic Henna Cones</h3>
+        <button class="organic-close" onclick="closeOrganicConeModal()">
+          <span class="close-icon">✕</span>
+        </button>
+      </div>
+
+      <div class="organic-content">
+        <div class="organic-features">
+          <div class="feature-item">
+            <span class="feature-icon">🌿</span>
+            <span class="feature-text">100% Organic</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🚫</span>
+            <span class="feature-text">Chemical-Free Formula</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🕌</span>
+            <span class="feature-text">Wudhu Friendly</span>
+          </div>
+        </div>
+
+        <div class="organic-description">
+          <p>
+            Experience the purest form of henna artistry with our premium organic henna cones.
+            Handcrafted with love using traditional recipes passed down through generations,
+            each cone contains only the finest natural ingredients sourced directly from trusted suppliers.
+          </p>
+
+          <p>
+            Perfect for those who value purity and tradition, our organic cones are also
+            wudhu-friendly, making them ideal for religious occasions and daily use.
+          </p>
+        </div>
+
+        <div class="organic-actions">
+          <a href="https://wa.me/917338826142?text=Hi! I'm interested in buying your organic henna cones. Could you please share more details about pricing and availability?" target="_blank" class="order-now-btn">
+            <span class="btn-icon">🛒</span>
+            <span class="btn-text">Order Now</span>
+            <div class="btn-shimmer"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Interactive Reviews System Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Interactive Reviews System loaded');
+
+      // Star Rating Functionality
+      const stars = document.querySelectorAll('.star-rating .star');
+      const hiddenInput = document.getElementById('selectedRating');
+      const ratingText = document.getElementById('ratingText');
+      let selectedRating = 0;
+
+      stars.forEach((star, index) => {
+        star.addEventListener('click', function() {
+          selectedRating = index + 1;
+          hiddenInput.value = selectedRating;
+          updateStarDisplay();
+          updateRatingText();
+        });
+
+        star.addEventListener('mouseenter', function() {
+          const hoverRating = index + 1;
+          highlightStars(hoverRating);
+        });
+      });
+
+      // Reset stars on mouse leave
+      const starContainer = document.getElementById('starRating');
+      if (starContainer) {
+        starContainer.addEventListener('mouseleave', function() {
+          updateStarDisplay();
+        });
+      }
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add('active');
+          } else {
+            star.classList.remove('active');
+          }
+        });
+      }
+
+      function updateStarDisplay() {
+        stars.forEach((star, index) => {
+          if (index < selectedRating) {
+            star.classList.add('active');
+          } else {
+            star.classList.remove('active');
+          }
+        });
+      }
+
+      function updateRatingText() {
+        if (selectedRating === 0) {
+          ratingText.textContent = 'Click to rate';
+          ratingText.style.color = '#666';
+        } else {
+          ratingText.textContent = `${selectedRating} star${selectedRating > 1 ? 's' : ''} selected`;
+          ratingText.style.color = '#4CAF50';
+        }
+      }
+
+      // Form Submission
+      const reviewForm = document.getElementById('reviewForm');
+      const reviewsList = document.getElementById('reviewsList');
+      const noReviewsMessage = document.getElementById('noReviewsMessage');
+
+      if (reviewForm) {
+        reviewForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          const formData = new FormData(reviewForm);
+          const reviewData = {
+            id: generateReviewId(),
+            name: formData.get('reviewerName'),
+            rating: parseInt(formData.get('rating')),
+            comment: formData.get('reviewComment'),
+            timestamp: new Date().toISOString()
+          };
+
+          // Validate form
+          if (!reviewData.name || !reviewData.rating || !reviewData.comment) {
+            alert('Please fill in all fields and select a rating.');
+            return;
+          }
+
+          if (reviewData.rating === 0) {
+            alert('Please select a star rating.');
+            return;
+          }
+
+          // Save to localStorage
+          saveReview(reviewData);
+
+          // Display the review
+          displayReview(reviewData);
+
+          // Reset form
+          reviewForm.reset();
+          selectedRating = 0;
+          hiddenInput.value = 0;
+          updateStarDisplay();
+          updateRatingText();
+
+          // Show success message
+          showSuccessMessage();
+        });
+      }
+
+      function saveReview(reviewData) {
+        let reviews = JSON.parse(localStorage.getItem('hennaReviews') || '[]');
+        reviews.unshift(reviewData); // Add to beginning of array
+
+        // Keep only the latest 10 reviews
+        if (reviews.length > 10) {
+          reviews = reviews.slice(0, 10);
+        }
+
+        localStorage.setItem('hennaReviews', JSON.stringify(reviews));
+      }
+
+      function displayReview(reviewData) {
+        // Hide no reviews message
+        if (noReviewsMessage) {
+          noReviewsMessage.style.display = 'none';
+        }
+
+        // Create review element
+        const reviewElement = createReviewElement(reviewData);
+
+        // Add to reviews list
+        if (reviewsList) {
+          reviewsList.insertBefore(reviewElement, reviewsList.firstChild);
+        }
+      }
+
+      function createReviewElement(reviewData) {
+        const reviewDiv = document.createElement('div');
+        reviewDiv.className = 'review-item';
+        reviewDiv.setAttribute('data-review-id', reviewData.id);
+
+        const timeAgo = getTimeAgo(new Date(reviewData.timestamp));
+        const avatarInitial = reviewData.name.charAt(0).toUpperCase();
+
+        reviewDiv.innerHTML = `
+          <div class="review-header">
+            <div class="review-user-info">
+              <div class="review-avatar">${avatarInitial}</div>
+              <div class="review-user-details">
+                <h4>${escapeHtml(reviewData.name)}</h4>
+              </div>
+            </div>
+            <div class="review-actions">
+              <div class="review-rating">
+                ${generateStars(reviewData.rating)}
+              </div>
+              <button class="delete-review-btn" onclick="deleteReview('${reviewData.id}')" title="Delete your review">
+                <span class="delete-icon">🗑️</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-text">"${escapeHtml(reviewData.comment)}"</div>
+          <div class="review-timestamp">${timeAgo}</div>
+        `;
+
+        return reviewDiv;
+      }
+
+      function generateStars(rating) {
+        let starsHtml = '';
+        for (let i = 0; i < 5; i++) {
+          if (i < rating) {
+            starsHtml += '<span class="star">★</span>';
+          } else {
+            starsHtml += '<span class="star" style="color: #ddd;">★</span>';
+          }
+        }
+        return starsHtml;
+      }
+
+      function getTimeAgo(date) {
+        const now = new Date();
+        const diffInSeconds = Math.floor((now - date) / 1000);
+
+        if (diffInSeconds < 60) {
+          return 'Just now';
+        } else if (diffInSeconds < 3600) {
+          const minutes = Math.floor(diffInSeconds / 60);
+          return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+        } else if (diffInSeconds < 86400) {
+          const hours = Math.floor(diffInSeconds / 3600);
+          return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+        } else {
+          const days = Math.floor(diffInSeconds / 86400);
+          return `${days} day${days > 1 ? 's' : ''} ago`;
+        }
+      }
+
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      function generateReviewId() {
+        return 'review_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      }
+
+      // Global function for deleting reviews (accessible from onclick)
+      window.deleteReview = function(reviewId) {
+        if (confirm('Are you sure you want to delete this review?')) {
+          // Remove from localStorage
+          let reviews = JSON.parse(localStorage.getItem('hennaReviews') || '[]');
+          reviews = reviews.filter(review => review.id !== reviewId);
+          localStorage.setItem('hennaReviews', JSON.stringify(reviews));
+
+          // Remove from DOM
+          const reviewElement = document.querySelector(`[data-review-id="${reviewId}"]`);
+          if (reviewElement) {
+            reviewElement.style.transition = 'all 0.3s ease';
+            reviewElement.style.transform = 'translateX(100%)';
+            reviewElement.style.opacity = '0';
+
+            setTimeout(() => {
+              reviewElement.remove();
+
+              // Show no reviews message if no reviews left
+              const remainingReviews = document.querySelectorAll('.review-item');
+              if (remainingReviews.length === 0 && noReviewsMessage) {
+                noReviewsMessage.style.display = 'block';
+              }
+            }, 300);
+          }
+
+          // Show delete success message
+          showDeleteSuccessMessage();
+        }
+      };
+
+      function showDeleteSuccessMessage() {
+        const successDiv = document.createElement('div');
+        successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #f44336;
+          color: white;
+          padding: 1rem 2rem;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+          z-index: 10000;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+        `;
+        successDiv.textContent = 'Review deleted successfully! 🗑️';
+
+        document.body.appendChild(successDiv);
+
+        setTimeout(() => {
+          successDiv.remove();
+        }, 3000);
+      }
+
+      function showSuccessMessage() {
+        // Create and show success message
+        const successDiv = document.createElement('div');
+        successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #4CAF50;
+          color: white;
+          padding: 1rem 2rem;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+          z-index: 10000;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+        `;
+        successDiv.textContent = 'Thank you for your review! ⭐';
+
+        document.body.appendChild(successDiv);
+
+        // Remove after 3 seconds
+        setTimeout(() => {
+          successDiv.remove();
+        }, 3000);
+      }
+
+      // Load existing reviews on page load
+      function loadExistingReviews() {
+        const reviews = JSON.parse(localStorage.getItem('hennaReviews') || '[]');
+
+        if (reviews.length > 0 && noReviewsMessage) {
+          noReviewsMessage.style.display = 'none';
+        }
+
+        reviews.forEach(review => {
+          const reviewElement = createReviewElement(review);
+          if (reviewsList) {
+            reviewsList.appendChild(reviewElement);
+          }
+        });
+      }
+
+      // Load reviews when page loads
+      loadExistingReviews();
+    });
+  </script>
+</body>
+</html>
