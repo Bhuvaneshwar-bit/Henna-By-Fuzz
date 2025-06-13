@@ -1234,11 +1234,15 @@ const styleGalleries = {
     description: 'A unique blend of Indian, Arabic, and contemporary styles customized for your event. Creating something entirely new and personal.',
     media: [
       { type: 'video', src: 'images/floral vid.mp4', alt: 'Fusion Floral Henna Application Process', autoplay: true },
-      { type: 'image', src: 'images/akmeh1.jpg', alt: 'Fusion Floral Henna Design 1' },
-      { type: 'image', src: 'images/akmeh5.jpg', alt: 'Fusion Floral Henna Design 2' },
-      { type: 'image', src: 'images/akmeh6.jpg', alt: 'Fusion Floral Henna Design 3' },
-      { type: 'image', src: 'images/akmeh8.jpg', alt: 'Fusion Floral Henna Design 4' },
-      { type: 'image', src: 'images/work1.jpg', alt: 'Fusion Floral Henna Design 5' }
+      { type: 'image', src: 'images/arab1.jpg', alt: 'Fusion Floral Henna Design 1' },
+      { type: 'image', src: 'images/arab2.jpg', alt: 'Fusion Floral Henna Design 2' },
+      { type: 'image', src: 'images/arab3.jpg', alt: 'Fusion Floral Henna Design 3' },
+      { type: 'image', src: 'images/arab4.jpg', alt: 'Fusion Floral Henna Design 4' },
+      { type: 'image', src: 'images/akmeh1.jpg', alt: 'Fusion Floral Henna Design 5' },
+      { type: 'image', src: 'images/akmeh5.jpg', alt: 'Fusion Floral Henna Design 6' },
+      { type: 'image', src: 'images/akmeh6.jpg', alt: 'Fusion Floral Henna Design 7' },
+      { type: 'image', src: 'images/akmeh8.jpg', alt: 'Fusion Floral Henna Design 8' },
+      { type: 'image', src: 'images/work1.jpg', alt: 'Fusion Floral Henna Design 9' }
     ]
   }
 };
