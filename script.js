@@ -1195,7 +1195,8 @@ const styleGalleries = {
       { type: 'image', src: 'images/akmeh3.PNG', alt: 'Traditional Henna Design 3' },
       { type: 'image', src: 'images/akmeh4.PNG', alt: 'Traditional Henna Design 4' },
       { type: 'image', src: 'images/trad1.jpg', alt: 'Traditional Henna Design 5' },
-      { type: 'image', src: 'images/trad2.jpg', alt: 'Traditional Henna Design 6' }
+      {type: 'image' , src: 'images/trad3.jpg' , alt: 'Traditional Henna Design 6'}
+      
     ]
   },
   arabic: {
@@ -1204,9 +1205,10 @@ const styleGalleries = {
     media: [
       { type: 'video', src: 'images/arabic.mp4', alt: 'Arabic Henna Application Process', autoplay: true },
       { type: 'image', src: 'images/akmeh7.jpg', alt: 'Arabic Henna Design 1' },
-      { type: 'image', src: 'images/akmeh8.jpg', alt: 'Arabic Henna Design 2' },
-      { type: 'image', src: 'images/arab1.jpg', alt: 'Arabic Henna Design 3' },
-      { type: 'image', src: 'images/arab11.jpg', alt: 'Arabic Henna Design 4' }
+      {type: 'image', src: 'images/arab1.jpg', alt: 'Arabic Henna Design2'},
+      { type: 'image', src: 'images/arab11.jpg', alt: 'Arabic Henna Design 3' },
+      {type: 'image', src:'images/arab6.jpg',alt:'Arabic Henna Design 4'},
+      {type: 'image',src:'images/arab5.jpg',alt:'Arabic Henna Design 5'}
     ]
   },
   khafeef: {
@@ -1216,10 +1218,9 @@ const styleGalleries = {
       { type: 'video', src: 'images/khafeef.mp4', alt: 'Khafeef Henna Application Process', autoplay: true },
       { type: 'image', src: 'images/work1.jpg', alt: 'Khafeef Henna Design 1' },
       { type: 'image', src: 'images/akmeh510.jpg', alt: 'Khafeef Henna Design 2' },
-      { type: 'image', src: 'images/akmeh12.jpeg', alt: 'Khafeef Henna Design 3' },
-      { type: 'image', src: 'images/khaf1.jpg', alt: 'Khafeef Henna Design 4' },
-      { type: 'image', src: 'images/khaf2.jpg', alt: 'Khafeef Henna Design 5' },
-      { type: 'image', src: 'images/khaf3.jpg', alt: 'Khafeef Henna Design 6' }
+      { type: 'image', src: 'images/khaf1.jpg', alt: 'Khafeef Henna Design 3' },
+      { type: 'image', src: 'images/khaf2.jpg', alt: 'Khafeef Henna Design 4' },
+      { type: 'image', src: 'images/khaf3.jpg', alt: 'Khafeef Henna Design 5' }
     ]
   },
   minimal: {
@@ -1235,7 +1236,9 @@ const styleGalleries = {
       { type: 'image', src: 'images/mod2.jpg', alt: 'Modern Minimal Henna Design 6' },
       { type: 'image', src: 'images/mod3.jpg', alt: 'Modern Minimal Henna Design 7' },
       { type: 'image', src: 'images/mod4.jpg', alt: 'Modern Minimal Henna Design 8' },
-      { type: 'image', src: 'images/mod5.jpg', alt: 'Modern Minimal Henna Design 9' }
+      { type: 'image', src: 'images/mod5.jpg', alt: 'Modern Minimal Henna Design 9' },
+      {type: 'image' , src: 'images/akmeh8.jpg', alt: 'Modern Minimal Henna Design 10'}
+      
     ]
   },
   fusion: {
@@ -1245,11 +1248,10 @@ const styleGalleries = {
       { type: 'video', src: 'images/floral vid.mp4', alt: 'Fusion Floral Henna Application Process', autoplay: true },
       { type: 'image', src: 'images/akmeh5.jpg', alt: 'Fusion Floral Henna Design 1' },
       { type: 'image', src: 'images/akmeh6.jpg', alt: 'Fusion Floral Henna Design 2' },
-      { type: 'image', src: 'images/akmeh8.jpg', alt: 'Fusion Floral Henna Design 3' },
-      { type: 'image', src: 'images/work1.jpg', alt: 'Fusion Floral Henna Design 4' },
-      { type: 'image', src: 'images/arab2.jpg', alt: 'Fusion Floral Henna Design 5' },
-      { type: 'image', src: 'images/arab3.jpg', alt: 'Fusion Floral Henna Design 6' },
-      { type: 'image', src: 'images/arab4.jpg', alt: 'Fusion Floral Henna Design 7' }
+      { type: 'image', src: 'images/work1.jpg', alt: 'Fusion Floral Henna Design 3' },
+      { type: 'image', src: 'images/arab2.jpg', alt: 'Fusion Floral Henna Design 4' },
+      { type: 'image', src: 'images/arab3.jpg', alt: 'Fusion Floral Henna Design 5' },
+      { type: 'image', src: 'images/arab4.jpg', alt: 'Fusion Floral Henna Design 6' }
     ]
   }
 };
