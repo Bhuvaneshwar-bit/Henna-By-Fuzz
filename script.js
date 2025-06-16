@@ -1231,13 +1231,12 @@ const styleGalleries = {
       { type: 'image', src: 'images/mandala1.jpg.jpg', alt: 'Modern Minimal Henna Design 1' },
       { type: 'image', src: 'images/mandala2.jpg.jpg', alt: 'Modern Minimal Henna Design 2' },
       { type: 'image', src: 'images/mandala3.jpg.jpg', alt: 'Modern Minimal Henna Design 3' },
-      { type: 'image', src: 'images/mod6.jpg', alt: 'Modern Minimal Henna Design 4' },
-      { type: 'image', src: 'images/mod1.jpg', alt: 'Modern Minimal Henna Design 5' },
-      { type: 'image', src: 'images/mod2.jpg', alt: 'Modern Minimal Henna Design 6' },
-      { type: 'image', src: 'images/mod3.jpg', alt: 'Modern Minimal Henna Design 7' },
-      { type: 'image', src: 'images/mod4.jpg', alt: 'Modern Minimal Henna Design 8' },
-      { type: 'image', src: 'images/mod5.jpg', alt: 'Modern Minimal Henna Design 9' },
-      {type: 'image' , src: 'images/akmeh8.jpg', alt: 'Modern Minimal Henna Design 10'}
+      { type: 'image', src: 'images/mod1.jpg', alt: 'Modern Minimal Henna Design 4' },
+      { type: 'image', src: 'images/mod2.jpg', alt: 'Modern Minimal Henna Design 5' },
+      { type: 'image', src: 'images/mod3.jpg', alt: 'Modern Minimal Henna Design 6' },
+      { type: 'image', src: 'images/mod4.jpg', alt: 'Modern Minimal Henna Design 7' },
+      { type: 'image', src: 'images/mod5.jpg', alt: 'Modern Minimal Henna Design 8' },
+      {type: 'image' , src: 'images/akmeh8.jpg', alt: 'Modern Minimal Henna Design 9'}
       
     ]
   },
